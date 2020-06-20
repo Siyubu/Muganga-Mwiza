@@ -152,7 +152,7 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
         {  
              add_action('admin_menu', array($this, 'PluginMenu'));  
         } 
-        register_activation_hook( _FILE_, 'my_plugin_create_db' );
+        //register_activation_hook( _FILE_, 'my_plugin_create_db' );
         
          // Create DB Here
         public function my_plugin_create_db() {
