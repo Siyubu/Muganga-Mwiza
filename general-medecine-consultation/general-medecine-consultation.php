@@ -177,7 +177,8 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
             $role = get_role( 'Nurse' );
             $role->add_cap( 'manage_options' ); // capability
          }
-   }  
+         register_activation_hook( _FILE_, 'activate_plugin_name' );
+   }  //end class
      
   $GeneralMedecineConsultation = GeneralMedecineConsultation::GetInstance();  
   $GeneralMedecineConsultation->InitPlugin();
