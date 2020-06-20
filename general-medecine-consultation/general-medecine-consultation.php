@@ -71,8 +71,6 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
 		<input   required type="text" data-field="fld_7817980" class=" form-control" id="fld_7817980_1" name="fld_7817980" value="" data-type="text" aria-required="true"   aria-labelledby="fld_7817980Label" >		</div>
         </div> 
     
-              
-    
               <div class="form-row">  
                   <label>  
                       <span>Email</span>  
@@ -153,10 +151,36 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
         public function InitPlugin()  
         {  
              add_action('admin_menu', array($this, 'PluginMenu'));  
-        }  
-      
+        } 
+        register_activation_hook( _FILE_, 'my_plugin_create_db' );
+        
+         // Create DB Here
+        public function my_plugin_create_db() {
+           
+    global $wpdb;
+	$charset_collate = $wpdb->get_charset_collate();
+	$table_name = $wpdb->prefix . 'general_medicine_consultation';
+
+	$sql = "CREATE TABLE $table_name (
+		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+		views smallint(5) NOT NULL,
+		clicks smallint(5) NOT NULL,
+		UNIQUE KEY id (id)
+	) $charset_collate;";
+
+	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+	dbDelta( $sql );
+        }
+        // make our plug in accessible  
+    public function activate_plugin_name() {
+            $role = get_role( 'Nurse' );
+            $role->add_cap( 'manage_options' ); // capability
+         }
    }  
      
   $GeneralMedecineConsultation = GeneralMedecineConsultation::GetInstance();  
-  $GeneralMedecineConsultation->InitPlugin();  
+  $GeneralMedecineConsultation->InitPlugin();
+  //$GeneralMedecineConsultation->my_plugin_create_db(); 
+  $GeneralMedecineConsultation->activate_plugin_name(); 
   ?>
