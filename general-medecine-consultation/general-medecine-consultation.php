@@ -64,14 +64,14 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
     
               <div class="form-title-row">  
                   <h1>General Medecine Consultation Form</h1>  
-              </div>  
+              </div> 
+              <div data-field-wrapper="fld_7817980" class="form-group" id="fld_7817980_1-wrap">
+	<label id="fld_7817980Label" for="fld_7817980_1" class="control-label">Patient Clinical Identity Number <span aria-hidden="true" role="presentation" class="field_required" style="color:#ee0000;">*</span></label>
+	<div class="">
+		<input   required type="text" data-field="fld_7817980" class=" form-control" id="fld_7817980_1" name="fld_7817980" value="" data-type="text" aria-required="true"   aria-labelledby="fld_7817980Label" >		</div>
+        </div> 
     
-              <div class="form-row">  
-                  <label>  
-                      <span>Full name</span>  
-                      <input type="text" name="name">  
-                  </label>  
-              </div>  
+              
     
               <div class="form-row">  
                   <label>  
