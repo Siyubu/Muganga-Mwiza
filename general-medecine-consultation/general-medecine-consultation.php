@@ -52,6 +52,8 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
 
          <div class="page-inner" style="min-height:1631px !important">
          <div class="page-title">
+         <div id="main-wrapper">
+		 <div class="row">
 
           <h2>General Medecine Consultation</h2>  
           <div class="main-content">  
@@ -140,6 +142,8 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
     
       </div>  
             
+         </div>
+         </div>
          </div>
          </div>
          </div>  
