@@ -22,7 +22,6 @@
         
         private $my_plugin_screen_name;  
         private static $instance;  
-         /....../  
       
         static function GetInstance()  
         {  
