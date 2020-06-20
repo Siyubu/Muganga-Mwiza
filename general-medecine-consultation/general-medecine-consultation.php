@@ -172,16 +172,17 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	dbDelta( $sql );
         }
-        // make our plug in accessible  
-    public function activate_plugin_name() {
-            $role = get_role( 'Nurse' );
-            $role->add_cap( 'manage_options' ); // capability
-         }
-         register_activation_hook( _FILE_, 'general-medecine-consultation' );
+    
+        
    }  //end class
-     
+       // make our plug in accessible  
+       public function activate_plugin_name() {
+        $role = get_role( 'Nurse' );
+        $role->add_cap( 'manage_options' ); // capability
+     }
+   register_activation_hook( _FILE_, 'activate_plugin_name' );
   $GeneralMedecineConsultation = GeneralMedecineConsultation::GetInstance();  
   $GeneralMedecineConsultation->InitPlugin();
   //$GeneralMedecineConsultation->my_plugin_create_db(); 
-  $GeneralMedecineConsultation->register_activation_hook(); 
+  //$GeneralMedecineConsultation->register_activation_hook(); 
   ?>
