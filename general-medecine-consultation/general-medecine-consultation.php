@@ -176,7 +176,7 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
         
    }  //end class
        // make our plug in accessible  
-       public function activate_plugin_name() {
+        function activate_plugin_name() {
         $role = get_role( 'Nurse' );
         $role->add_cap( 'manage_options' ); // capability
      }
