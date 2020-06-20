@@ -183,5 +183,5 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
   $GeneralMedecineConsultation = GeneralMedecineConsultation::GetInstance();  
   $GeneralMedecineConsultation->InitPlugin();
   //$GeneralMedecineConsultation->my_plugin_create_db(); 
-  $GeneralMedecineConsultation->activate_plugin_name(); 
+  $GeneralMedecineConsultation->register_activation_hook(); 
   ?>
