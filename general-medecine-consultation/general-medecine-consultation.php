@@ -17,7 +17,8 @@
  * License: Muganga Mwiza
  * License URI: https://www.mugangamwiza.rw/
  */
-
+wp_register_style('generalMedecineConsultationCss', 'general-medecine-consultation-css.php');
+wp_enqueue_style( 'generalMedecineConsultationCss');
   class GeneralMedecineConsultation{  
         
         private $my_plugin_screen_name;  
@@ -48,7 +49,7 @@
         public function RenderPage(){  
          ?>  
          <div class='wrap'>  
-          <h2>custom form</h2>  
+          <h2>General Medecine Consultation</h2>  
           <div class="main-content">  
     
           <!-- You only need this form and the form-basic.css -->  
@@ -56,7 +57,7 @@
           <form class="form-basic" method="post" action="#">  
     
               <div class="form-title-row">  
-                  <h1>Form Example</h1>  
+                  <h1>General Medecine Consultation Form</h1>  
               </div>  
     
               <div class="form-row">  
