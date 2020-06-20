@@ -146,6 +146,6 @@
       
    }  
      
-  $MyPlugin = MyPlugin::GetInstance();  
-  $MyPlugin->InitPlugin();  
+  $GeneralMedecineConsultation = GeneralMedecineConsultation::GetInstance();  
+  $GeneralMedecineConsultation->InitPlugin();  
   ?>
