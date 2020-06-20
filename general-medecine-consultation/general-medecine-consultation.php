@@ -49,6 +49,10 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
         public function RenderPage(){  
          ?>  
          <div class='wrap'>  
+
+         <div class="page-inner" style="min-height:1631px !important">
+         <div class="page-title">
+
           <h2>General Medecine Consultation</h2>  
           <div class="main-content">  
     
@@ -136,6 +140,8 @@ wp_enqueue_style( 'generalMedecineConsultationCss');
     
       </div>  
             
+         </div>
+         </div>
          </div>  
          <?php  
         }  
